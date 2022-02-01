@@ -28,7 +28,8 @@
 
 :root {
     font-size: 18px;
-    --white30: white;
+    --coral: #EEBBC3;
+    --white30: #FFFFFE;
     --white20: #A5A3A5;
     --white10: #3A3539;
 }
@@ -38,9 +39,10 @@ html {
 }
 
 body {
+    margin: 0;
     color: var(--white30);
     font-family: 'Nunito', sans-serif;
-    background: #251F24;
+    background: #232946;
 }
 
 a {
@@ -89,15 +91,6 @@ hr {
     border-color: rgba(97, 97, 97, 0.2);
 }
 
-pre {
-    background: var(--white10);
-    padding: 40px;
-    overflow: auto;
-    border: 10px solid #5551FF;
-    box-shadow: -10px 10px 0 0 #ABAAF6;
-    margin-block-end: 30px;
-}
-
 .main hr {
     display: none;
 }
@@ -118,21 +111,16 @@ h3 {
     margin-block: 16px;
 }
 
-.hero {
-    background: linear-gradient(96.07deg, #314755 30.63%, #26A0DA 102.18%);
-    block-size: 50px;
-}
-
 p {
-    color: var(--white20);
+    color: #B8C1EC;
 }
 
 
 blockquote {
     margin-block-start: 80px;
     margin-block-end: 63px;
-    background: var(--white10);
-    border-radius: 8px;
+    background: var(--coral);
+    
     line-height: 32px;
     font-size: 24px;
 
@@ -169,11 +157,12 @@ blockquote span::before {
 }
 
  .section-content {
-     margin-top: 164px;
+     margin-top: 125px;
  }
 
  .section-content ul li {
      margin-bottom: 16px;
+     color: #B8C1EC;
  }
 
  .section-content ol li{
@@ -247,7 +236,7 @@ padding-bottom: 8px;
 }
 
 .form input[type="submit"] {
-    background: #157EFB;
+    background: var(--coral);
     border: none;
 }
 
@@ -255,11 +244,37 @@ padding-bottom: 8px;
     color: var(--white20);
 }
 
-@media screen and (min-width: 1366px) {
 
-    .hero {
-        block-size: 350px;
-    }
+/*Pie de página*/
+
+footer {
+    background-color: var(--coral);
+}
+
+.section-footer {
+    margin-block-start: 150px;
+}
+
+.copyrigth{
+    color: #232946;
+    text-align: center;
+    /*margin-block-start: 140px;*/
+    padding-block-start: 30px;
+    font-size: 1.2em;
+}
+
+.redes {
+    display: flex;
+    color: #232946;
+    justify-content: center;
+    padding-block-end: 52px;
+}
+
+.redes, a{
+    padding-inline-end: 15px;
+}
+
+@media screen and (min-width: 1366px) {
 
     .header{
         position: sticky;

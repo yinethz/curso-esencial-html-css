@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/styleLogical.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="styles/nemium/styleNemiumC.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Quicksand:wght@300&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
 
     <meta property="og:title" content="Mi proyecto del curso esencial de HTML y CSS">
     <meta property="og:type" content="website">
@@ -34,14 +36,19 @@
     <meta name="theme-color" content="#ffffff">
     <title>Introducción</title>
 </head>
-<body>
-        <div class="hero"></div>
-
+<body>        
+    <div class="main-content">
+        <div class="main-tittle">
+            <h1>Curso esencial de HTML y CSS</h1>
+            <p>Este es el inicio de tu carrera como Desarrollador Web, empezarás aprendiendo HTML y CSS para la creación de contenidos, en el nivel 2 aprenderás de componentes y en 3 sobre layouts.</p>   
+        </div>
+    </div>
+        
         <div class="header">
             <div class="wrapper">
                 <div class="header-content">
                     <header>
-                        <details>
+                        <details open>
                             <summary>Setup</summary>
                             <ol>
                                 <li>
@@ -59,28 +66,28 @@
                             </ol>
                         </details>
             
-                    <details>
+                    <details open>
                         <summary>Conceptos esenciales del Desarrollo Web</summary>
                         <ol>
-                                <li>
-                                    <a href="#html">¿Qué es HTML?</a> 
-                                </li>
-                                <li>
-                                    <a href="#etiquetas">Etiquetas</a> 
-                                </li>
-                                <li>
-                                    <a href="#dom">DOM</a> 
-                                </li>
-                                <li>
-                                    <a href="#atributos">Atributos</a> 
-                                </li>
-                                <li>
-                                    <a href="#semantica">Semántica</a> 
-                                </li>
-                                <li>
-                                    <a href="#css">¿Qué es CSS?</a> 
-                                </li>
-                            </ol>
+                            <li>
+                                <a href="#html">¿Qué es HTML?</a> 
+                            </li>
+                            <li>
+                                <a href="#etiquetas">Etiquetas</a> 
+                            </li>
+                            <li>
+                                <a href="#dom">DOM</a> 
+                            </li>
+                            <li>
+                                <a href="#atributos">Atributos</a> 
+                            </li>
+                            <li>
+                                <a href="#semantica">Semántica</a> 
+                            </li>
+                            <li>
+                                <a href="#css">¿Qué es CSS?</a> 
+                            </li>
+                        </ol>
                     </details>
                         
                         
@@ -91,13 +98,8 @@
 
     <main class="main">
         <div class="wrapper">
-            <div class="main-content">
-                <h1>Curso esencial de HTML y CSS</h1>
-                <p>Este es el inicio de tu carrera como Desarrollador Web, empezarás aprendiendo HTML y CSS para la creación de contenidos, en el nivel 2 aprenderás de componentes y en 3 sobre layouts.</p>
-
-                <hr>
-
             <section class="section-content">
+                <hr/>
                 <h2>Setup</h2>
                 <img src="images/googleChrome.png" alt="Logo Google Chrome" title="Logo Google Chrome">
                 <h3 id="google-chrome">Google Chrome</h3>
@@ -213,8 +215,6 @@
                         <scroll-page class="slider-slide" id="video3">
                             <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/5f5Ig_U2Bpk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </scroll-page>
-
-
                     </scroll-container>
 
                     <div class="slider-bullet-list">
@@ -230,16 +230,36 @@
                     <a href="mailto:yinethz654@hotmail.com">yinethz654@hotmail.com</a>
                 </p>
 
-                <div class="section-content">
-                    <h2>Ingresa a nuestro newsletter</h2>
-                    <form action="#" class="form">
-                        <input type="text"  required placeholder="Nombre">
-                        <input type="email" required placeholder="Correo electrónico">
-                        <input type="submit" value="Suscribirme">
-                    </form>
-                </div>
+        <div class="section-content">
+            <h2>Ingresa a nuestro newsletter</h2>
+            <form action="#" class="form">
+                <div class="section-form">
+                    <div class="form-name">
+                        <input type="text" class="name"  required placeholder="Nombre">
                     </div>
-                </div>
+                    <div class="form-dates">
+                        <input type="email" class="email" required placeholder="Correo electrónico">
+                        <input type="submit" class="submit" value="Suscribirme">
+                    </div>
+                </div>                        
+            </form>
+        </div>
     </main>
+
+    <footer>
+        <div class="section-footer">
+            <div class="copyrigth">
+                <h3> &copy; Leonidas Esteban 2022</h3>
+            </div>
+            <div class="redes">
+                <a href="https://www.instagram.com/leonidasesteban/" target="_blanck"> <img src="images/instagram.png" alt="instagram"> </a>
+                <a href="https://www.facebook.com/leonidasesteban/" target="_blanck"> <img src="images/facebook.png" alt="facebook"> </a>
+                <a href="https://www.twitter.com/leonidasesteban/" target="_blanck"> <img src="images/twitter.png" alt="twitter"> </a>
+            </div>
+        </div>
+        
+    </footer>
 </body>
 </html>
+
+

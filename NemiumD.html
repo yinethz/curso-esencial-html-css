@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/styleLogical.css">
+    <link rel="stylesheet" href="styles/nemium/styleNemiumD.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Quicksand:wght@300&display=swap" rel="stylesheet">
@@ -41,7 +41,7 @@
             <div class="wrapper">
                 <div class="header-content">
                     <header>
-                        <details>
+                        <details open>
                             <summary>Setup</summary>
                             <ol>
                                 <li>
@@ -101,7 +101,7 @@
                 <h2>Setup</h2>
                 <img src="images/googleChrome.png" alt="Logo Google Chrome" title="Logo Google Chrome">
                 <h3 id="google-chrome">Google Chrome</h3>
-                <p>Chrome va a ser el navegador que utilizaremos en el curso por su extenso soporte de nuevos estándares y herramientas de desarrollo avanzadas y de amigable uso.</p>
+                <p>Chrome va a ser <span>el navegador que utilizaremos</span> en el curso por su extenso soporte de nuevos estándares y herramientas de desarrollo avanzadas y de amigable uso.</p>
 
                 <img src="images/visualStudioCode.png" alt="Logo editor de código visual Studio Code" title="Logo editor de código visual Studio Code">
                 <h3 id="vsc">Visual Studio Code</h3>
@@ -109,7 +109,7 @@
 
                 <img src="images/figma.png" alt="Logo Figma" title="Logo Figma">
                 <h3 id="figma">Figma</h3>
-                <p>Figma es una la herramienta más popular en la actualidad para entregar diseños a los desarrolladores para su implementación por su fácil uso porque puede ser usado directamente desde el navegador.</p>
+                <p>Figma es una la herramienta más popular en la actualidad para entregar diseños a los desarrolladores para su implementación por <span>su fácil</span> uso porque puede ser usado directamente desde el navegador.</p>
 
                 <img src="images/gitHub.png" alt="Logo GitHub" title="Logo GitHub">
                 <h3 id="github">GitHub</h3>
@@ -122,9 +122,6 @@
                     </span>
                 </blockquote>
             </section>
-
-                <hr/>
-
 
             <section class="section-content">
                 <h2>Conceptos esenciales del Desarrollo Web</h2>
@@ -167,9 +164,7 @@
                 <img src="images/css.png" alt="Imagen relacionada con css" title="Imagen relacionada con css">
             </section>
 
-                <hr/>
-
-            <section class="section-content">
+            <section>
                 <h2>Modelo de caja</h2>
                 <h3>El modelo de caja está compuesto por: </h3>
                 <p>Chrome va a ser el navegador que utilizaremos en el curso por su extenso soporte de nuevos estándares y herramientas de desarrollo avanzadas y de amigable uso.</p>
@@ -182,18 +177,18 @@
             
                 <h3>Propiedades físicas para el modelo de caja:</h3>
                 <ul>
-                    <li>width / height</li>
-                    <li>margin / margin-top | margin-right | margin-bottom | margin-left</li>
-                    <li>border / border-top | border-right | border-bottom | border-left</li>
-                    <li>padding / padding-top | padding-right | padding-bottom | padding-left</li>
+                    <li><span>width / height</span></li>
+                    <li><span>margin / margin-top | margin-right | margin-bottom | margin-left</span></li>
+                    <li><span>border / border-top | border-right | border-bottom | border-left</span></li>
+                    <li><span>padding / padding-top | padding-right | padding-bottom | padding-left</span></li>
                 </ul>
             
                 <h3>Propiedades lógicas para el modelo de caja:</h3>
                 <ul>
-                    <li>inline-size / block-size</li>
-                    <li>margin-block | margin-inline | margin-block-start | margin-block-end | margin-inline-start | margin-inline-end</li>
-                    <li>border-block | border-inline | border-block-start | border-block-end | border-inline-start | border-inline-end</li>
-                    <li>padding-block | padding-inline | padding-block-start | padding-block-end | padding-inline-start | padding-inline-end</li>
+                    <li><span>inline-size / block-size</span></li>
+                    <li><span>margin-block | margin-inline | margin-block-start | margin-block-end | margin-inline-start | margin-inline-end</span></li>
+                    <li><span>border-block | border-inline | border-block-start | border-block-end | border-inline-start | border-inline-end</span></li>
+                    <li><span>padding-block | padding-inline | padding-block-start | padding-block-end | padding-inline-start | padding-inline-end</span></li>
                 </ul>
             </section>
 
@@ -233,13 +228,32 @@
                 <div class="section-content">
                     <h2>Ingresa a nuestro newsletter</h2>
                     <form action="#" class="form">
-                        <input type="text"  required placeholder="Nombre">
-                        <input type="email" required placeholder="Correo electrónico">
-                        <input type="submit" value="Suscribirme">
+                        <div class="section-form">
+                            <div class="form-name">
+                                <input type="text" class="name"  required placeholder="Nombre">
+                            </div>
+                            <div class="form-dates">
+                                <input type="email" class="email" required placeholder="Correo electrónico">
+                                <input type="submit" class="submit" value="Suscribirme">
+                            </div>
+                        </div>                        
                     </form>
                 </div>
+            </main>
+        
+            <footer>
+                <div class="section-footer">
+                    <div class="copyrigth">
+                        <p class="copyrigth"> &copy; Leonidas Esteban 2022</p>
+                    </div>
+                    <div class="redes">
+                        <a href="https://www.instagram.com/leonidasesteban/" target="_blanck"> <img src="images/instagram.png" alt="instagram"> </a>
+                        <a href="https://www.facebook.com/leonidasesteban/" target="_blanck"> <img src="images/facebook.png" alt="facebook"> </a>
+                        <a href="https://www.twitter.com/leonidasesteban/" target="_blanck"> <img src="images/twitter.png" alt="twitter"> </a>
                     </div>
                 </div>
+                
+            </footer>
     </main>
 </body>
 </html>

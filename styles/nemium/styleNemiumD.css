@@ -29,8 +29,9 @@
 :root {
     font-size: 18px;
     --white30: white;
-    --white20: #A5A3A5;
-    --white10: #3A3539;
+    --black30: #000000;
+    --purple: #5551FF;
+    --black10: #545454;
 }
 
 html {
@@ -38,13 +39,13 @@ html {
 }
 
 body {
-    color: var(--white30);
+    margin: 0;
+    color: var(--black10);
     font-family: 'Nunito', sans-serif;
-    background: #251F24;
 }
 
 a {
-    color: var(--white30);
+    color: var(--black10);
 }
 
 .header-content {
@@ -58,17 +59,18 @@ header {
 }
 
 header li {
-    color: var(--white20);
+    color: var(--purple);
     margin-block-end: 16px;
 }
 
 header a {
-    color: var(--white20);
+    color: var(--black30);
     text-decoration: none;
 }
 
 header a:hover {
     color: var(--white30);
+    background-color: var(--purple);
 }
 
 nav details summary {
@@ -76,12 +78,20 @@ nav details summary {
     line-height: 44px;
 }
 
+details[open] {
+    font-weight: 700;
+}
+
+
 header li {
     margin-bottom: 16px;
+    color: var(--black30);
 }
 
 h1, h2, h3 {
     font-weight: normal;
+    color: var(--black30);
+    text-align: center;
 }
 
 hr {
@@ -90,16 +100,12 @@ hr {
 }
 
 pre {
-    background: var(--white10);
+    background: var(--white30);
     padding: 40px;
     overflow: auto;
-    border: 10px solid #5551FF;
+    border: 10px solid var(--purple);
     box-shadow: -10px 10px 0 0 #ABAAF6;
     margin-block-end: 30px;
-}
-
-.main hr {
-    display: none;
 }
 
 h1 {
@@ -119,35 +125,40 @@ h3 {
 }
 
 .hero {
-    background: linear-gradient(96.07deg, #314755 30.63%, #26A0DA 102.18%);
+    background: linear-gradient(254.07deg, #B385ED -6.37%, #d729ee57 102.18%), url("../../images/patron-2.png");
     block-size: 50px;
 }
 
 p {
-    color: var(--white20);
+    color: var(--black10);
+    text-align: center;
+}
+
+p span {
+    color: var(--purple);
 }
 
 
 blockquote {
     margin-block-start: 80px;
     margin-block-end: 63px;
-    background: var(--white10);
-    border-radius: 8px;
+    background: var(--white30);
     line-height: 32px;
     font-size: 24px;
 
-    padding-inline-end: 24px;
+    border-left: 4px solid var(--purple);
+    padding-inline-end: 160px;
     padding-inline-start: 24px;
-    padding-block-start: 24px;
-    padding-block-end: 24px;    
+    padding-block-start: 0;
+    padding-block-end: 0;    
 }
 
 blockquote p {
-    color: var(--white30);
+    color: var(--black30);
 }
 
 blockquote span{
-    color: var(--white30);
+    color: var(--black30);
 }
 
 blockquote span::before {
@@ -162,14 +173,13 @@ blockquote span::before {
 .main-content {
     padding: 16px;
 }
-
  
 .section-content:first-of-type {
     margin: 0;
 }
 
  .section-content {
-     margin-top: 164px;
+     margin-top: 100px;
  }
 
  .section-content ul li {
@@ -180,14 +190,12 @@ blockquote span::before {
      line-height: 24px;
  }
 
- .section-content + hr {
-    display: none;
- }
 
 .section-content img {
     margin-block-start: 40px;
     display: block;
     max-inline-size: 100%;
+    margin: auto;
 }
 
 .section-content h3{
@@ -201,6 +209,14 @@ padding-bottom: 8px;
 
 .section-content{
     counter-reset: titleList;
+}
+
+ul li {
+    color: var(--purple);
+}
+
+li span {
+    color: var(--black10);
 }
 
 .slider-container {
@@ -226,34 +242,101 @@ padding-bottom: 8px;
 
 .slider-bullet {
     display: inline-block;
-    inline-size: 15px;
     block-size: 15px;
-    background: white;
+    background: var(--purple);
     border-radius: 50%;
 }
 
-.form input {
-    inline-size: 100%;
-    box-sizing: border-box;
-    border: 1px solid var(--white30);
-    background: #251F24;
-    border-radius: 8px;
-    padding-inline: 16px;
-    padding-block: 12px;
+/*Formulario suscribete*/
+
+.section-content, h2{
+    text-align: left;
+}
+.section-form {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-name, .form-dates {
+    border: 1px solid var(--black10);
+    border-radius: 90px;
+    width: 280px;
+    height: 30px;
+    padding: 12px 16px;
+    font-size: 1em;
+    font-weight: 400;
+    color: #616161;
+}
+
+.form-dates {
+    margin-inline-start: 30px;
+}
+
+.name, .email {
+    width: 280px;
+    height: 24px;
+    top: 12px;
+    border: none;
+    font-size: 1em;
+    outline: none;
+}
+
+.submit {
+    border-radius: 90px;
+    width: 280px;
+    height: 56px;
+    font-size: 0.9em;
     color: var(--white30);
-    font-size: 16px;
-    display: block;
-    margin-block-end: 24px;
+    position: relative;
+    top: -13px;
+    outline: none;
+    font-weight: 600;
+    background-color: var(--purple);
+    padding-inline-start: 15px;
+    padding-inline-end: 16px;
 }
 
 .form input[type="submit"] {
-    background: #157EFB;
     border: none;
 }
 
 .form input::placeholder {
-    color: var(--white20);
+    color: var(--black10);
 }
+
+.form .form-dates {
+    display: inline-flex;
+}
+
+/*Pie de página*/
+
+footer {
+    background-color: var(--black30);
+}
+
+.section-footer {
+    margin-block-start: 150px;
+}
+
+.copyrigth {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--white30);
+    text-align: center;
+    padding-block-start: 28px;
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    padding-block-end: 52px;
+}
+
+.redes, a{
+    padding-inline-end: 15px;
+}
+
 
 @media screen and (min-width: 1366px) {
 
@@ -275,7 +358,7 @@ padding-bottom: 8px;
     header {
         position: absolute;
         inset-block-start: 0;
-        inset-inline-start: -208px;
+        inset-inline-start: 100%;
         inline-size: 188px;
     }
 
